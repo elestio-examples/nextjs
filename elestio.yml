@@ -1,0 +1,26 @@
+config:
+  runTime: "NodeJs"
+  version: ""
+  framework: "Next.js"
+  buildCommand: "yarn build"
+  buildDir: ".next/"
+  runCommand: "yarn run dev"
+  installCommand: "yarn install"
+  icon: "public/favicon.ico"
+  screenshot: "public/next.png"
+ports:
+  - protocol: "HTTPS"
+    targetProtocol: "HTTP"
+    listeningPort: "443"
+    targetPort: "3000"
+    public: true
+    path: "/"
+    isAuth: false
+    login: ""
+    password: ""
+environments:
+  - key: "ENV"
+    value: "production"
+webUI:
+  - url: "https://[CI_CD_DOMAIN]"
+    label: "Website"    
